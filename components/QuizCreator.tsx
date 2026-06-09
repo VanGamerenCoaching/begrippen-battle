@@ -3,7 +3,6 @@
 import { useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import { TermInput } from "@/components/TermInput";
-import { appPath } from "@/lib/paths";
 import {
   generateQuestions,
   parseTerms,
@@ -226,7 +225,7 @@ export function QuizCreator() {
               <button
                 className="min-h-11 rounded-lg bg-ocean px-5 font-black text-white"
                 onClick={() =>
-                  router.push(appPath(`/quiz-spelen?quizId=${encodeURIComponent(savedQuiz.id)}`))
+                  router.push(`/quiz-spelen?quizId=${encodeURIComponent(savedQuiz.id)}`)
                 }
                 type="button"
               >

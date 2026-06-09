@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { appPath } from "@/lib/paths";
 import { getQuizzes } from "@/lib/storage";
 import type { Quiz } from "@/lib/types";
 
@@ -37,7 +36,7 @@ export default function HomePage() {
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
               className="inline-flex min-h-12 items-center justify-center rounded-lg bg-ocean px-6 text-base font-black text-white shadow-lift transition hover:bg-teal-800"
-              href={appPath("/quiz-maken")}
+              href="/quiz-maken"
             >
               Quiz maken
             </Link>
@@ -73,7 +72,7 @@ export default function HomePage() {
           </div>
           <Link
             className="inline-flex min-h-11 items-center rounded-lg bg-ocean px-5 font-black text-white"
-            href={appPath("/quiz-maken")}
+            href="/quiz-maken"
           >
             Nieuwe quiz
           </Link>
@@ -100,7 +99,7 @@ export default function HomePage() {
                 </p>
                 <Link
                   className="mt-4 inline-flex min-h-11 items-center rounded-lg bg-ocean px-5 font-black text-white"
-                  href={appPath(`/quiz-spelen?quizId=${encodeURIComponent(quiz.id)}`)}
+                  href={`/quiz-spelen?quizId=${encodeURIComponent(quiz.id)}`}
                 >
                   Speel quiz
                 </Link>

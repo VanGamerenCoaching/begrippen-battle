@@ -1,6 +1,6 @@
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
-export function appPath(path: string) {
+export function staticAssetPath(path: string) {
   if (!basePath) {
     return path;
   }

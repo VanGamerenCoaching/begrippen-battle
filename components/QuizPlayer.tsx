@@ -5,7 +5,6 @@ import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { ProgressBar } from "@/components/ProgressBar";
 import { QuestionCard } from "@/components/QuestionCard";
-import { appPath } from "@/lib/paths";
 import { getQuiz } from "@/lib/storage";
 
 type Answer = {
@@ -38,7 +37,7 @@ export function QuizPlayer() {
         </p>
         <Link
           className="mt-5 inline-flex min-h-12 items-center rounded-lg bg-ocean px-6 font-black text-white"
-          href={appPath("/")}
+          href="/"
         >
           Terug naar home
         </Link>
@@ -145,7 +144,7 @@ export function QuizPlayer() {
           </button>
           <Link
             className="inline-flex min-h-12 items-center rounded-lg border border-slate-300 bg-white px-6 font-black text-ink"
-            href={appPath("/")}
+            href="/"
           >
             Terug naar home
           </Link>
